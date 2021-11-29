@@ -1,0 +1,86 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-kapt")
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "spiral.bit.dev.imageloader"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    viewBinding.enabled true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    // UI
+    implementation("androidx.appcompat:appcompat:$appCompatVersion")
+    implementation("com.google.android.material:material:$materialVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$constraintLayoutVersion")
+    implementation("com.kirich1409.viewbindingpropertydelegate:viewbindingpropertydelegate:$viewBindingVersion")
+
+    // Ktx's
+    implementation("androidx.core:core-ktx:$coreKtxVersion")
+
+    // Coil
+    implementation("io.coil-kt:coil:$coilVersion")
+    implementation("io.coil-kt:coil-gif:$coilVersion")
+
+    // Kodein - DI
+    implementation("org.kodein.di:kodein-di:$kodeinVersion")
+    implementation("org.kodein.di:kodein-di-framework-android-core:$kodeinVersion")
+    implementation("org.kodein.di:kodein-di-framework-android-x:$kodeinVersion")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$navigationVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navigationVersion")
+
+    // Architecture
+    implementation("net.pedroloureiro.mvflow:mvflow-core:$mvFlowVersion")
+
+    // REST ( Ktor client ) & SERIALIZATION (Kotlinx) & PAGING LIBRARY
+    implementation("io.ktor:ktor-client-core:$ktorVersion")
+    implementation("io.ktor:ktor-client-android:$ktorVersion")
+    implementation("io.ktor:ktor-client-logging:$ktorVersion")
+    implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
+    implementation("android.arch.paging:runtime:$pagingVersion")
+
+    // Database ( Room )
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.room:room-paging:2.4.0-beta02")
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt("androidx.room:room-compiler:$roomVersion")
+
+    // Logging
+    implementation("ch.qos.logback:logback-classic:$logbackVersion")
+}
