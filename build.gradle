@@ -45,6 +45,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven {
+            url "http://giphy.bintray.com/giphy-sdk"
+            allowInsecureProtocol = true
+        }
     }
 
     dependencies {
