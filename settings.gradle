@@ -16,11 +16,12 @@ pluginManagement({
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        jcenter() // Warning: this repository is going to shut down soon
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
         gradlePluginPortal()
         maven { url "https://kotlin.bintray.com/kotlinx" }
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="16dp"
+    app:cardBackgroundColor="@color/dark_green"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/pictureImageView"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_margin="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_image" />
+
+        <TextView
+            android:id="@+id/pictureAuthorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pictureImageView"
+            app:layout_constraintTop_toTopOf="@id/pictureImageView"
+            tools:text="Выложил: Username" />
+
+        <Button
+            android:id="@+id/deletePictureButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_medium"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_rounded_16"
+            app:layout_constraintEnd_toEndOf="@id/moreDetailsButton"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="@id/moreDetailsButton"
+            app:layout_constraintBottom_toTopOf="@id/moreDetailsButton"
+            android:text="@string/delete_label" />
+
+        <Button
+            android:id="@+id/moreDetailsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_16"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="@string/more_details_label"
+            app:layout_constraintBottom_toBottomOf="@id/pictureImageView"
+            app:layout_constraintEnd_toEndOf="@id/pictureAuthorTextView"
+            app:layout_constraintStart_toStartOf="@id/pictureAuthorTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

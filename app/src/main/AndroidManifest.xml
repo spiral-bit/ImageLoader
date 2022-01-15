@@ -18,7 +18,7 @@
         android:theme="@style/Theme.ImageLoader"
         tools:ignore="UnusedAttribute">
         <activity
-            android:name="spiral.bit.dev.imageloader.ui.features.main.MainActivity"
+            android:name=".ui.features.main.view.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

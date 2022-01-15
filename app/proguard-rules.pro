@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class spiral.bit.dev.imageloader.data.dataSources.remote.models.unsplash.*
+-keep class spiral.bit.dev.imageloader.data.dataSources.remote.models.gif.*

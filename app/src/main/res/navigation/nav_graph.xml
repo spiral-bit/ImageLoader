@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="spiral.bit.dev.imageloader.ui.features.feed.FeedFragment"
+        android:name="spiral.bit.dev.imageloader.ui.features.feed.view.FeedFragment"
         android:label="fragment_feed"
         tools:layout="@layout/fragment_feed" />
     <fragment
-        android:id="@+id/cardsFragment"
-        android:name="spiral.bit.dev.imageloader.ui.features.cards.CardsFragment"
-        android:label="fragment_cards"
-        tools:layout="@layout/fragment_cards" />
+        android:id="@+id/favouritesFragment"
+        android:name="spiral.bit.dev.imageloader.ui.features.favourites.view.FavouritesFragment"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" />
     <fragment
         android:id="@+id/gifsFragment"
-        android:name="spiral.bit.dev.imageloader.ui.features.gifs.GifsFragment"
+        android:name="spiral.bit.dev.imageloader.ui.features.giphy.view.GiphyFragment"
         android:label="fragment_gifs"
-        tools:layout="@layout/fragment_gifs" />
+        tools:layout="@layout/fragment_giphy" />
 </navigation>
